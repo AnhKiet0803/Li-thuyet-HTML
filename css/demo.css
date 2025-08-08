@@ -1,0 +1,28 @@
+h1{
+    color:red;
+}
+p{
+    color: #720f0fa1;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: justify;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    /*bold=700, normal=400, medium=500, black=900, extra-bold=800, semi-bold=600, thin=100,extra-thin=200,light=300 */
+    text-decoration: underline; /*underline, line-through, overline, none*/
+    text-transform: capitalize; /*uppercase, lowercase, capitalize, none*/
+    width: 1000px;
+    font-style: ;
+    word-spacing: 1px;
+    background-color: rgb(73, 44, 105);
+    border-bottom: 2px solid yellow;
+}
+a{
+    color:#511ad1;
+    text-decoration: none;
+}
+body{
+    background-color: aliceblue;
+    background-image: url("../images/Ảnh.jpg");
+    background-size: cover;
+}

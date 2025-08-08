@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Event</title>
+</head>
+<body>
+    <button onclick="f1();" type="button">Button</button>
+    <button onmouseenter="f2();" type="button">Button</button>
+    <button onmouseleave="f3();" type="button">Button</button>
+    <hr/>
+    <br>
+    <input id="ip" onkeydown="key2()" onkeyup="key3()" type="text" name="search" placeholder="enter key..."/>
+    <p id="text-search"></p>
+    <p id="text-search2"></p>
+
+    <select name="city" onchange="key5();">
+        <option value="HN">Hà Nội</option>
+        <option value="HCM">Hồ Chí Minh</option>
+    </select>
+
+    <script type="text/javascript" src="js/event.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+    "name":"Đồng hồ casio",
+    "price":28,
+    "qty":7,
+    "thumbnail":"images/dongho.webp",
+    "review":{
+        "rating":5,
+        "qty":172
+    }
+}

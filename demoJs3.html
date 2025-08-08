@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Js 3</title>
+</head>
+<body>
+    <h1 id="head1" class="hehe">Demo Js Effect</h1>
+    <h2><span id="min">10</span>:<span id="sec">00</span></h2>
+    <script type="text/javascript">
+        setTimeout(function(){
+            var h = document.getElementById("head1");                   // h là thay thế của thẻ h1
+            // h.innerText = "Đây là nội dung đã bị thay đổi";          // innerText là thay đổi nội dung
+            // h.innerHTML = "<i>Đây là nội dung đã in nghiêng</i>";    // innerHTML là in nghiêng nội dung
+            h.style.color = "deeppink";                                 // style là thay đổi theo ý mình bằg các thuộc tính html
+            h.style.fontSize ="50px";
+            h.classList.add("demo");                                    // classList.add: thêm class vào thẻ h1
+            h.classList.remove("hehe");                                 // classsList.remove: xoá class đã đặt thẻ h1
+        },5000);
+
+        var m = 10; // 10p
+        var s = 0;  // 0s
+        var timer = setInterval(function(){
+            console.log(m+":"+s);
+            var min = document.getElementById("min");
+            var sec = document.getElementById("sec");
+            min.innerText = m>=10?m:"0"+m;
+            sec.innerText = s>=10?s:"0"+s;
+            // toán tử 3 ngôi: x = đkien ? đúng : sai
+            s--;
+            if(s<0){
+                m--;
+                s=59;
+            }
+            if(m<0){
+                clearInterval(timer); // dừng lại khi đếm về 0s
+            }
+        },1000);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/layout.css"/>
+</head>
+<body>
+    <main class="section main">
+        <div class="container">
+            <img id="sp_img" src="#" width="400">
+            <h1 id="sp_name">Váy thời trang cao cấp</h1>
+            <p>Giá tiền: <span id="sp_price">12</span>$</p>
+            <p>Số lượng: <span id="sp_qty">3</span></p>
+            <p>Rate: <span id="rating">0</span></p>
+        </div>
+    </main>
+    <script type="text/javascript">
+
+        // call API và sd dlieu từ API vào giao diện
+        const url="http://127.0.0.1:5500/data/sanpham.json"
+        fetch(url).then(rs=>rs.json())
+        .then(rs=>{
+            // lấy dlieu của json và sd trong này
+            //console.log(rs);
+            document.getElementById("sp_name").innerText=rs.name; 
+            document.getElementById("sp_price").innerText=rs.price;
+            document.getElementById("sp_qty").innerText=rs.qty;
+            document.getElementById("sp_img").src=rs.thumbnail;
+            document.getElementById("rating").innerText=rs.review.rating;
+        })
+
+        var sp = {    // đây là 1 object
+            name: "Túi sách Gucci",
+            price: 1000,
+            qty: 5,
+            thumbnail: "images/canhquat.png"
+        }
+        //var sanpham_name = document.getElementById("sp_name");
+        //sanpham_name.innerText = sp.name; //sp.name ở var sp
+        //document.getElementById("sp_name").innerText=sp.name; // dòng này viết gọn của 2 dòng trên
+        //document.getElementById("sp_price").innerText=sp.price;
+        //document.getElementById("sp_qty").innerText=sp.qty;
+        //document.getElementById("sp_img").src=sp.thumbnail;
+    </script>
+</body>
+</html>

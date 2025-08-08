@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // code Js here
+        function lucky_number(){
+            // random 1 số ngẫu nhiên
+            var lk = parseInt(Math.random() * 100);
+            console.log(lk); // cheating: ktra xem con số random là số nào
+            // cho ng chơi điền số dự đoán
+            var n = prompt("Nhập số dự đoán của bạn:");
+            n = parseInt(n);
+            // cho ng chơi đặt số tiền muốn cược
+            var m = prompt("Nhập số tiền bạn muốn đặt cược:");
+            m = parseInt(m);
+            if(n == lk){
+                m = m * 70;
+                alert("Chúc mừng bạn đã trúng thưởng, số tiền bạn nhận được là:"+m);
+            }else{
+                alert("Chúc bạn may mắn vào lần kế tiếp.");
+            }
+        }
+        lucky_number(); // gọi hàm
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quạt</title>
+</head>
+<body>
+    <div class="fan-box">
+        <img id="fan" src="images/canhquat.png" width="400">
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="control">
+        <button onclick="speed0();" type="button">OFF</button>
+        <button onclick="speed1();" type="button">Speed 1</button>
+        <button onclick="speed2();" type="button">Speed 2</button>
+        <button onclick="speed3();" type="button">Speed 3</button>
+    </div>
+
+    <script type="text/javascript">
+        var dg = 0;
+        var speed = 0;
+        var fan = setInterval(function(){
+            dg+=speed;
+            var f = document.getElementById("fan");
+            f.style.transform = `rotate(${dg}deg)`;
+            if(dg == 360){
+                dg = 0;
+            }
+        },5);
+        function speed1(){
+            speed = 10;
+        }
+        function speed2(){
+            speed = 30;
+        }
+        function speed3(){
+            speed = 80;
+        }
+        function speed0(){
+            speed = 0;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/forms.css"/>
+</head>
+<body>
+    <header class="section header">
+        <div class="container">
+            <h2>Header</h2>
+        </div>
+    </header>
+    <nav class="section nav">
+        <div class="container">
+            <h2>Navigator</h2>
+        </div>
+    </nav>
+    <main class="section main">
+        <div class="container three-columns">
+            <aside class="a-left">
+                <h2>Aside Left</h2>
+            </aside>
+            <section class="content">
+                <h2>Form demo</h2>
+                <!--form demo-->
+                <form method="get" action="#">
+                    <div class="form-group">
+                        <label for="name">Full name:</label>
+                        <input type="text" name="full_name" placeholder="Enter your full name" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Email:</label>
+                        <input type="email" name="Email" placeholder="Enter your email" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="telephone">Telephone</label>
+                        <input type="tel" name="Telephone" placeholder="enter your telephone number" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="DOB">Date of Birth</label>
+                        <input type="date" name="DOB" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">Password</label>
+                        <input type="password" name="password" placeholder="Enter your password" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="Gender">Gender</label>
+                        <input type="radio" name="Gender" value="male"/> Male
+                        <input type="radio" name="Gender" value="female"/> Female
+                    </div>
+                    <div class="form-group">
+                        <label for="Weight">Weight</label>
+                        <input type="number" name="Weight" placeholder="Enter your weight in kg"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="Avatar">Avatar</label>
+                        <input type="file" name="Avatar"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="My_color">My color</label>
+                        <input type="color" name="My_color"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="My_time">My time</label>
+                        <input type="time" name="My_time"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="terms" value="agree" id="terms">
+                        <label for="terms">I agree to the terms and conditions</label> 
+                    </div>
+                    <div class="form-group">
+                        <label for="City">City</label> 
+                        <select name="city">
+                            <option value="hanoi">Hà Nội</option>
+                            <option value="hochiminh">Hồ Chí Minh</option>
+                            <option value="quangninh">Quảng Ninh</option>
+                            <option value="namdinh">Nam Định</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Address">Address</label>
+                        <textarea name="address" rows="5" placeholder="Enter your address here"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                        <button type="button">Button</button>
+                    </div>
+                </form>
+            </section>
+            <aside class="a-right">
+                <h2>Aside Right</h2>
+            </aside>
+        </div>
+    </main>
+    <footer class="section footer">
+        <div class="container">
+            <h2>Footer</h2>
+        </div>
+    </footer>
+</body>
+</html>
